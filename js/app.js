@@ -1,4 +1,8 @@
-fetch('list.json')
+fetch('list.json', {
+    headers: {
+      'Cache-Control': 'no-cache'
+    }
+})
     .then(response => response.json())
     .then(data => {
         const memeList = document.getElementById('meme-list');
